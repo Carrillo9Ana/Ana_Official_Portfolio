@@ -2,14 +2,21 @@ import React from 'react';
 
 import './SideNav.css';
 
-export const SideNav = () => {
+export const SideNav = ({ handleSectionClick }) => {
     return (
         <div className="sidenav">
             <img 
-                src="https://avatars1.githubusercontent.com/u/50473626?s=60&v=4"
+                src="https://avatars1.githubusercontent.com/u/50473626?v=4"
                 className="avatar"
                 alt="avatar"
             />
+            <h2 className="main-name"> Ana Carrillo </h2>
+            <p className="subtitle">Full Stack Web Developer and Hiker</p>
+            <div className="sections-list">
+                <p className="section-list-element" onClick={() => handleSectionClick("about")}>About Me</p>
+                <p className="section-list-element" onClick={() => handleSectionClick("skills")}>Skills</p>
+                <p className="section-list-element" onClick={() => handleSectionClick("projects")}>Projects</p>
+            </div>
         </div>
-    )
-}
+    );
+};
