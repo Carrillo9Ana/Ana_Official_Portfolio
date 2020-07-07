@@ -36,7 +36,7 @@ export class App extends Component {
     this.setState({
       selectedSection: section,
       selectedHeading: this.state[section].heading,
-      selectedQuote: this.state[section].quote,
+      selectedQuote: this.state[section].quote
     });
   };
 

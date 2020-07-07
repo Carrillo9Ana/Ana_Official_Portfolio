@@ -22,7 +22,7 @@ export const SectionContainer = ({
             <div className="section-component">
                 {
                     {
-                        about: <About bio={about.bio} />,
+                        about: <About />,
                         skills: <Skills skills={skills} />,
                         projects: <Projects projects={projects} />
                     }[selectedSection]

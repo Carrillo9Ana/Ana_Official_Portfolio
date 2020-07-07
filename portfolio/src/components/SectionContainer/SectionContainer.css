@@ -19,7 +19,7 @@
 .section-heading-container::after {
     display: inline-block;
     content: "";
-    border-top: 1px solid black;
+    border-top: 1px solid #e6a050;
     width: 4rem;
     margin-top: 0;
     margin-bottom: 5px;

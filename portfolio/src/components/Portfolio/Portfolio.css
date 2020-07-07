@@ -12,7 +12,7 @@
 
 @media only screen and (max-width: 600px) {
     .sidenav-container {
-        border-bottom: 1px solid #FCFAF7;
+        border-bottom: 1px solid #e6a050;
         border-radius: 0;
         padding-bottom: 32px;
     }
@@ -24,7 +24,7 @@
 }
 
 .portfolio-container:hover {
-    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    box-shadow: 0 14px 28px rgba(230,160,75), 0 10px 10px rgba(230, 160, 80);
 }
 
 .sidenav-container {
@@ -42,7 +42,7 @@
 
 @media only screen and (min-width: 600px) {
     .sidenav-container {
-        border-right: 1px solid #FCFAF7;
+        border-right: 1px solid #9c6a32;
     }
 }
 
