@@ -5,7 +5,7 @@ import './ProjectCard.css';
 export const ProjectCard = ({ project }) => {
     return (
         <div className="project-card">
-            <p><b>Name:</b> {project.name} </p>
+            <p><b>Name:</b> {project.name} </p><br/>
             <img className="images" src={project.image} alt=" project "/>
             <p><b>Describtion:</b> {project.description} </p>
             <p><a href={project.link}>Application deployed link</a></p>

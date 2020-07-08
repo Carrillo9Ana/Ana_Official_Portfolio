@@ -1,4 +1,5 @@
 .skill-card {
+    color: #292725;
     display: flex;
     flex-direction: column;
     align-items: center;

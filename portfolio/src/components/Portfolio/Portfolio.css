@@ -1,5 +1,4 @@
 .portfolio-container {
-    background-color: #db7a0b;
     margin: 20px;
     margin-left: 15%;
     width: 70%;
@@ -24,7 +23,7 @@
 }
 
 .portfolio-container:hover {
-    box-shadow: 0 14px 28px rgba(230,160,75), 0 10px 10px rgba(230, 160, 80);
+    box-shadow: 0 5px 28px rgb(156, 106, 50), 0 8px 16px rgb(156, 106, 50);
 }
 
 .sidenav-container {
@@ -42,7 +41,7 @@
 
 @media only screen and (min-width: 600px) {
     .sidenav-container {
-        border-right: 1px solid #9c6a32;
+        border-right: 1px solid #e6a050;
     }
 }
 
