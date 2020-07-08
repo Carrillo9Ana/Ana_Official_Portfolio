@@ -14,6 +14,11 @@ export const contact = {
             reference: "Twitter",
             link: "https://twitter.com/SKAJ04",
             icon: "fab fa-twitter-square"
+        }, {
+            reference: "Gmail",
+            link: "mailto:acarrillo9724@gmail.com",
+            icon: "fas fa-envelope-square",
+            email: "acarrillo9724@gmail.com"
         }
     ]
 }

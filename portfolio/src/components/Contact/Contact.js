@@ -9,5 +9,6 @@ export const Contact = ({ contact }) => {
                 contact.contactList.map(contactme => <ContactCard contactme={contactme} />)  
             }
         </div>
+        
     )
 }
