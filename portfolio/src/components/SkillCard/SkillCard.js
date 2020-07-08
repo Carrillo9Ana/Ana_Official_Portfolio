@@ -4,7 +4,7 @@ import './SkillCard.css';
 
 export const SkillCard = ({ skill }) => {
     return (
-        <div>
+        <div className="skill-card">
             {skill}
         </div>
     )

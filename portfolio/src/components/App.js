@@ -5,6 +5,7 @@ import { Portfolio } from "./Portfolio/Portfolio.js";
 import { about } from "./../constants/About.js";
 import { skills } from "./../constants/Skills.js";
 import { projects } from "./../constants/Projects.js";
+import { contact } from "./../constants/Contact.js";
 
 import "./App.css";
 
@@ -18,6 +19,7 @@ export class App extends Component {
       about: null,
       skills: null,
       projects: null,
+      contact: null,
     };
   }
 
@@ -26,6 +28,7 @@ export class App extends Component {
       about,
       skills,
       projects,
+      contact,
       selectedHeading: about.heading,
       selectedQuote: about.quote,
       selectedSection: "about",
@@ -36,7 +39,7 @@ export class App extends Component {
     this.setState({
       selectedSection: section,
       selectedHeading: this.state[section].heading,
-      selectedQuote: this.state[section].quote
+      selectedQuote: this.state[section].quote,
     });
   };
 
@@ -51,6 +54,7 @@ export class App extends Component {
           about={this.state.about}
           skills={this.state.skills}
           projects={this.state.projects}
+          contact={this.state.contact}
         />
       </div>
     );
