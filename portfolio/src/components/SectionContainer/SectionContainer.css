@@ -2,6 +2,7 @@
     text-align: left;
     padding-right: 20px;
     overflow-y: auto;
+    min-height: 520px;
 }
 
 .main-heading {
