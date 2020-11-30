@@ -6,7 +6,9 @@ import { about } from "./../constants/About.js";
 import { skills } from "./../constants/Skills.js";
 import { projects } from "./../constants/Projects.js";
 import { contact } from "./../constants/Contact.js";
-import  NavBar from "./../components/Navigation/NavBar.js"
+
+import NavBar from "./../components/Navigation/NavBar.js";
+import SelfIntro from "./../components/Carousel/Carousel.js";
 
 import "./App.css";
 
@@ -47,7 +49,8 @@ export class App extends Component {
   render() {
     return (
       <div className="App">
-        <NavBar/>
+        <NavBar />
+        <SelfIntro />
         <Portfolio
           handleSectionClick={this.handleSectionClick}
           selectedSection={this.state.selectedSection}
