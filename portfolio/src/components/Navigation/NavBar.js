@@ -5,18 +5,13 @@ import NavDropdown from "react-bootstrap/NavDropdown";
 import Form from "react-bootstrap/Form";
 import FormControl from "react-bootstrap/FormControl";
 import Button from "react-bootstrap/Button";
-import img from "react-bootstrap/Image"
-
 
 export default function NavBar() {
   return (
     <>
     <Navbar bg="info" variant="dark">
       <Navbar.Brand href="#home">
-        <img 
-          src="/logo_2.jpg"
-          alt="logotype"
-        />
+        {'{AC}'}
       </Navbar.Brand>
       <Nav className="mr-auto">
         <Nav.Link href="#home">Home</Nav.Link>
