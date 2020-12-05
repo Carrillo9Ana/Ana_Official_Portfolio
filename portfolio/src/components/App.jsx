@@ -2,13 +2,13 @@ import React, { Component } from "react";
 
 import { Portfolio } from "./Portfolio/Portfolio.js";
 
-import { about } from "./../constants/About.js";
-import { skills } from "./../constants/Skills.js";
-import { projects } from "./../constants/Projects.js";
-import { contact } from "./../constants/Contact.js";
+import { about } from "../constants/About.js";
+import { skills } from "../constants/Skills.js";
+import { projects } from "../constants/Projects.js";
+import { contact } from "../constants/Contact.js";
 
-import NavBar from "./../components/Navigation/NavBar.js";
-import SelfIntro from "./../components/Carousel/Carousel.js";
+import NavBar from "./Navigation/NavBar.jsx";
+import SelfIntro from "./Carousel/Carousel.js";
 
 import "./App.css";
 
@@ -60,7 +60,7 @@ export class App extends Component {
           skills={this.state.skills}
           projects={this.state.projects}
           contact={this.state.contact}
-        />
+        />{" "}
       </div>
     );
   }
