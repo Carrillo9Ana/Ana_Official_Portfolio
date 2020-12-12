@@ -7,11 +7,12 @@ import {
   Switch,
 } from "react-router-dom";
 import { Security, LoginCallback, SecureRoute } from "@okta/okta-react";
+
 import "antd/dist/antd.css";
 
-// routes/pages will go here in the future
 import { LandingPage } from "./components/pages/Landing";
-import { config } from "./oktaConfig.js";
+import { LoginPage } from "./components/pages/Login";
+import { config } from "./utils/oktaConfig.js";
 
 ReactDOM.render(
   <Router>
@@ -36,6 +37,8 @@ function App() {
     <Security {...config} onAuthRequired={authHandler}>
       <Switch>
         <Route path="/home" component={LandingPage} />
+        <Route path="/login" component={LoginPage} />
+        <Route path="/implicit/callback" component={LoginCallback} />
       </Switch>
     </Security>
   );
