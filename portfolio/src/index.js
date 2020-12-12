@@ -6,11 +6,12 @@ import {
   useHistory,
   Switch,
 } from "react-router-dom";
-import { Security, LoginCallback, SecureRoute } from '@okta/okta-react';
+import { Security, LoginCallback, SecureRoute } from "@okta/okta-react";
 import "antd/dist/antd.css";
 
 // routes/pages will go here in the future
-import { config } from './oktaConfig.js';
+import { LandingPage } from "./components/pages/Landing";
+import { config } from "./oktaConfig.js";
 
 ReactDOM.render(
   <Router>
@@ -29,14 +30,13 @@ function App() {
   const authHandler = () => {
     // We pass this to our <Security /> component that wraps our routes.
     // It'll automatically check if userToken is available and push back to login if not :)
-    history.push('/login');
+    history.push("/login");
   };
   return (
     <Security {...config} onAuthRequired={authHandler}>
       <Switch>
-        <div>Hello</div>
+        <Route path="/home" component={LandingPage} />
       </Switch>
     </Security>
-  )
+  );
 }
-
