@@ -1,17 +1,45 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './components/App';
-import * as serviceWorker from './serviceWorker';
+import React from "react";
+import ReactDOM from "react-dom";
+import {
+  BrowserRouter as Router,
+  Route,
+  useHistory,
+  Switch,
+} from "react-router-dom";
+import { Security, LoginCallback, SecureRoute } from "@okta/okta-react";
+
+import "antd/dist/antd.css";
+
+import { LandingPage } from "./components/pages/Landing";
+import { LoginPage } from "./components/pages/Login";
+import { config } from "./utils/oktaConfig.js";
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
+  <Router>
+    <React.StrictMode>
+      <App />
+    </React.StrictMode>
+  </Router>,
+  document.getElementById("root")
 );
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();
+function App() {
+  // The reason to declare App this way is so that we can use any helper functions we'd need for business logic, in our case auth.
+  // React Router has a nifty useHistory hook we can use at this level to ensure we have security around our routes.
+  const history = useHistory();
+
+  const authHandler = () => {
+    // We pass this to our <Security /> component that wraps our routes.
+    // It'll automatically check if userToken is available and push back to login if not :)
+    history.push("/login");
+  };
+  return (
+    <Security {...config} onAuthRequired={authHandler}>
+      <Switch>
+        <Route path="/home" component={LandingPage} />
+        <Route path="/login" component={LoginPage} />
+        <Route path="/implicit/callback" component={LoginCallback} />
+      </Switch>
+    </Security>
+  );
+}
